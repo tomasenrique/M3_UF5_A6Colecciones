@@ -1,49 +1,4 @@
-Generando NIF válidos
 
-Se le puede pasar o no una semilla(seed), de forma que todos los números generados acaben en esos dígitos.
-
-La clase de utilidad se llama NifUtil,
-si le paso NifUtil.generaNif(null) me genera un nif válido.
-si le paso NifUtil.generaNif("4444") me genera un nif que acabará en "4444".
-
-public class NifUtil {
-
-    private static final char[] LETRAS_DNI = {'T', 'R', 'W', 'A', 'G', 'M', 'Y', 'F', 'P', 'D', 'X', 'B', 'N', 'J', 'Z', 'S', 'Q', 'V', 'H', 'L', 'C', 'K', 'E'};
-
-    public static String generaNif(String seed) {
-        if (seed != null) {
-            try {
-                Integer.parseInt(seed);
-            } catch (NumberFormatException ex) {
-                return "KO";
-            }
-        } else {
-            seed = "";
-        }
-        String numeroDNI = String.valueOf(Math.random());
-        String fullDNI = numeroDNI.substring(numeroDNI.length() - 8);
-
-        int dniInt = Integer.valueOf(fullDNI);
-        fullDNI = fullDNI + LETRAS_DNI[dniInt % 23];
-        return fullDNI;
-    }
-
-
-    public static String calculaLetra(String nif) {
-        if (nif.length() != 8) {
-            return ("Nif Inválido");
-        }
-        return generaNif(nif).substring(8);
-    }
-
-    public static String validaNif(String nif) {
-        if (nif.substring(0, 8).length() == 8) {
-            return nif.equalsIgnoreCase(generaNif(nif.substring(0, 8))) ? "OK" : "error";
-        } else {
-            return ("Nif Inválido");
-        }
-    }
-}
 
 
 

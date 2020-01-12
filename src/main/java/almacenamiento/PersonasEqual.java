@@ -7,34 +7,33 @@ import java.util.ArrayList;
 
 public class PersonasEqual {
 
-    private ArrayList<Persona> personasEquals;
+    private ArrayList<Persona> listaPersonasEquals;
 
     // Builder
     public PersonasEqual() {
-        this.personasEquals = new ArrayList<>();
+        this.listaPersonasEquals = new ArrayList<>();
     }
 
     // Setter and Getter
-
-    public ArrayList<Persona> getPersonasEquals() {
-        return personasEquals;
+    public ArrayList<Persona> getListaPersonasEquals() {
+        return listaPersonasEquals;
     }
 
-    public void setPersonasEquals(ArrayList<Persona> personasEquals) {
-        this.personasEquals = personasEquals;
+    public void setListaPersonasEquals(ArrayList<Persona> listaPersonasEquals) {
+        this.listaPersonasEquals = listaPersonasEquals;
     }
-
 
     // Methods
     public void agregarPersonaLista(Persona persona) {
-        personasEquals.add(persona); // agrega las monedas a la lista
+        listaPersonasEquals.add(persona); // agrega las monedas a la lista
     }
 
-
+    // Methods
     @Override
     public String toString() {
         return "PersonasEqual{" +
-                "personas=" + personasEquals +
+                "listaPersonasEquals=" + listaPersonasEquals +
                 '}';
     }
+
 }
