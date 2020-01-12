@@ -27,7 +27,26 @@ public class MethodStatic {
     }
 
 
-
-
-
+    /**
+     * Esta funcion servira pra centrar el texto como titulo
+     *
+     * @param cadenaTitulo Sera la cadena a centrar
+     * @param tamanyo Sera el tamaño de linea a agregar para centrar el titulo
+     */
+    public static void textCenter(String cadenaTitulo, int tamanyo) {
+        int left = (tamanyo - cadenaTitulo.length()) / 2;
+        int right = tamanyo - left - cadenaTitulo.length();
+        String charArepetir = "-"; // linea de titulo para concatenar
+        StringBuffer buff = new StringBuffer();
+        for (int i = 0; i < left; i++) {
+            buff.append(charArepetir);
+        }
+        buff.append(cadenaTitulo);
+        for (int i = 0; i < right; i++) {
+            buff.append(charArepetir);
+        }
+        System.out.println(buff.toString());
+    }
 }
+
+

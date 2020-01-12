@@ -1,7 +1,6 @@
 package almacenamiento;
 
 import entidad.Persona;
-import excepciones.ElementoDuplicadoException;
 
 import java.util.HashSet;
 
@@ -35,14 +34,6 @@ public class PersonasHashSet {
 
     public void agregarPersonaListaHashSet(Persona persona) {
         listaPersonasHashSet.add(persona); // agrega la persona que no sean iguales
-
-   /*     boolean contiene = false; // para saber si esta el objeto igual
-
-        for (Persona p : listaPersonasHashSet) { // se itera todo el array para verificar el contenido
-            if (listaPersonasHashSet.equals(persona))
-                contiene = true; // verifica que la moneda no existe en el arrayList
-        }
-        if (!contiene) listaPersonasHashSet.add(persona); // agrega la persona que no sean iguales*/
     }
 }
 

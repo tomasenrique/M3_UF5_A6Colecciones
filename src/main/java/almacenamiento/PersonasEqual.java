@@ -1,7 +1,7 @@
 package almacenamiento;
 
 import entidad.Persona;
-import excepciones.ElementoDuplicadoException;
+import static constantes_metodos.MethodStatic.getTime;
 
 import java.util.ArrayList;
 

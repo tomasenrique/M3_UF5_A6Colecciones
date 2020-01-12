@@ -23,7 +23,6 @@ public class PersonasTreeSet {
     }
 
     // Methods
-
     @Override
     public String toString() {
         return "PersonasTreeSet{" +
