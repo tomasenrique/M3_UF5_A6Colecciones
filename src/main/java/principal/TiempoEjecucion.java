@@ -113,5 +113,13 @@ public class TiempoEjecucion {
         textCenter("-", 85);
     }
 
+    /**OJO IMPORTANTE LEER
+     * Pruebas con un ArrayList que no acepta objetos iguales
+     * En las pruebas realizadas se encontro que en una lista de tipo ArrayList que no acepta objetos iguales
+     * el tiempo de implemtacion es de mas de 10 minutos cuando se le aplica una cantidad superior a 300000 mil
+     * objetos y en otros casos ni siquierea se obtien el resultado por lo tanto usar un ArrayList que no acepte
+     * objetos identicos solo nos servira si la cantidad de estos es pequeña ya que de lo contrario no es muy efectiva.
+     */
+
 
 }
